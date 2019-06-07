@@ -1,2 +1,0 @@
-# TaipanServa
-Created with CodeSandbox
