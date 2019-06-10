@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express()
   .use((req, res) => res.sendFile(__dirname + "/index.html") )
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+  .listen(config.PORT, () => console.log(`Listening on ${ config.PORT }`));
 const io = require("socket.io")(app);
 const cors = require("cors");
 const config = require('./config');
