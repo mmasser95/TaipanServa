@@ -3,7 +3,7 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 const cors = require("cors");
 let usernames = [];
-server.listen(8080);
+server.listen(80);
 app.use(cors);
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/index.html");
