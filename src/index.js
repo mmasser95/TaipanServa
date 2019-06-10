@@ -2,8 +2,9 @@ const app = require("express")();
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 const cors = require("cors");
+const config = require('./config');
 let usernames = [];
-server.listen(80);
+server.listen(config.PORT);
 app.use(cors);
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/index.html");
