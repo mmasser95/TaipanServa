@@ -1,14 +1,13 @@
-const app = require("express")();
-const server = require("http").Server(app);
-const io = require("socket.io")(server);
+const app = express()
+  .use((req, res) => res.sendFile(__dirname + "/index.html") )
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+const io = require("socket.io")(app);
 const cors = require("cors");
 const config = require('./config');
 let usernames = [];
 server.listen(config.PORT);
 app.use(cors);
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/index.html");
-});
+
 
 io.on("connection", socket => {
   socket.emit("hello", { hello: "What is your username?" });
