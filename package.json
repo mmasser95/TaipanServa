@@ -4,11 +4,15 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js "
+    "start": "node src/index.js"
   },
   "dependencies": {
+    "bcrypt-node": "0.1.0",
     "cors": "2.8.5",
     "express": "4.17.1",
+    "jwt-simple": "0.5.6",
+    "moment": "2.24.0",
+    "mongoose": "5.5.13",
     "socket.io": "2.2.0"
   },
   "devDependencies": {
