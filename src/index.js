@@ -1,10 +1,11 @@
 const express = require('express');
+const config = require('./config');
 const app = express()
   .use((req, res) => res.sendFile(__dirname + "/index.html") )
   .listen(config.PORT, () => console.log(`Listening on ${ config.PORT }`));
 const io = require("socket.io")(app);
 const cors = require("cors");
-const config = require('./config');
+
 let usernames = [];
 server.listen(config.PORT);
 app.use(cors);
