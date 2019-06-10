@@ -7,7 +7,6 @@ const io = require("socket.io")(app);
 const cors = require("cors");
 
 let usernames = [];
-server.listen(config.PORT);
 app.use(cors);
 
 
